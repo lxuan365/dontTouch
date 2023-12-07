@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        font-size: 10px;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -30px;
+        font-family: serif;
+      }
+      .check_group {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .checkbox-custom {
+        user-select: none;
+        /* height: 5rem; 
+        line-height: 5rem;  */
+      }
+      .checkbox-custom > input[type="checkbox"] {
+        display: none;
+      }
+      .checkbox-custom > label {
+        font-size: 2rem;
+        cursor: pointer;
+      }
+      /* 选中 */
+      input:checked + label::before {
+        content: "✔";
+        border: none;
+        vertical-align: -0.5rem;
+        margin: 1rem;
+        font-size: 3rem;
+      }
+      input:checked + label {
+        text-decoration: line-through;
+      }
+      /* 未选中 */
+      label::before {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        vertical-align: -1.5rem;
+        content: "";
+        border: 0.2rem solid black;
+        margin: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="check_group">
+      <div class="checkbox-custom">
+        <input type="checkbox" id="myCheckbox1" />
+        <label for="myCheckbox1">myCheckbox</label>
+      </div>
+      <div class="checkbox-custom">
+        <input type="checkbox" id="myCheckbox2" />
+        <label for="myCheckbox2">myCheckbox</label>
+      </div>
+      <div class="checkbox-custom">
+        <input type="checkbox" id="myCheckbox3" />
+        <label for="myCheckbox3">myCheckbox</label>
+      </div>
+    </div>
+  </body>
+</html>

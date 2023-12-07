@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../asset/iconfont.js"></script>
+    <style>
+      .container {
+        display: flex;
+      }
+      .loopyImg {
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+        background-image: url("../../image/loopy.jpg");
+        background-size: cover;
+        transition: transform 0.7s ease;
+      }
+      .filter {
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+      }
+      .img_container:hover div:nth-child(2) .filter {
+        backdrop-filter: blur(20px);
+      }
+      .img_container {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+        margin: 25px;
+      }
+      .mask_pub {
+        position: absolute;
+        z-index: 20;
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+        background-color: rgba(145, 143, 143, 0.7);
+        transform: scale(0);
+        transition: transform 0.5s ease;
+        text-align: center;
+      }
+      .img_container:hover div:nth-child(1) {
+        transform: scale(1);
+      }
+      .img_container:hover div:nth-child(2) {
+        transform: rotate(-10deg);
+      }
+      .icon {
+        width: 2em;
+        height: 2em;
+        fill: currentColor;
+        overflow: hidden;
+        margin: 5px;
+        margin-top: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img_container">
+        <!--  -->
+        <div class="mask_pub">
+          <svg class="icon icon1" aria-hidden="true">
+            <use xlink:href="#icon-qq-copy"></use>
+          </svg>
+          <svg class="icon icon2" aria-hidden="true">
+            <use xlink:href="#icon-weibo"></use>
+          </svg>
+          <svg class="icon icon3" aria-hidden="true">
+            <use xlink:href="#icon-weixin"></use>
+          </svg>
+        </div>
+        <!-- image -->
+        <div class="loopyImg">
+          <div class="filter"></div>
+        </div>
+      </div>
+      <div class="img_container">
+        <div class="mask_pub">
+          <svg class="icon icon1" aria-hidden="true">
+            <use xlink:href="#icon-qq-copy"></use>
+          </svg>
+          <svg class="icon icon2" aria-hidden="true">
+            <use xlink:href="#icon-weibo"></use>
+          </svg>
+          <svg class="icon icon3" aria-hidden="true">
+            <use xlink:href="#icon-weixin"></use>
+          </svg>
+        </div>
+        <div class="loopyImg">
+          <div class="filter"></div>
+        </div>
+      </div>
+      <div class="img_container">
+        <div class="mask_pub">
+          <svg class="icon icon1" aria-hidden="true">
+            <use xlink:href="#icon-qq-copy"></use>
+          </svg>
+          <svg class="icon icon2" aria-hidden="true">
+            <use xlink:href="#icon-weibo"></use>
+          </svg>
+          <svg class="icon icon3" aria-hidden="true">
+            <use xlink:href="#icon-weixin"></use>
+          </svg>
+        </div>
+        <div class="loopyImg">
+          <div class="filter"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script></script>
+</html>
