@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>两端对齐布局</title>
+  <style>
+    .container1 {
+      column-count: 3;
+    }
+    .container1 div {
+      height: 200px;
+      background-color: papayawhip;
+    }
+    .container2 {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .container2 div {
+      height: 200px;
+      width: calc(100vw / 3);
+      background-color: papayawhip;
+    }
+  </style>
+</head>
+<body>
+  <h2>使用column实现两端对齐</h2>
+  <div class="container1">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <hr>
+  <h2>使用flex实现两端对齐</h2>
+  <div class="container2">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>
